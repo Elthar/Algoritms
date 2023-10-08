@@ -1,5 +1,5 @@
 # Algoritms
 Cracking coding interview solutions
 ----------------------------------
-1. [Palindrome permutation.py](url)
-2. [isUnique.py](url)
+1. [Palindrome permutation.py](Algoritms/Palindrome permutation.py)
+2. [isUnique.py](isUnique.py)
