@@ -1,5 +1,5 @@
 class Solution:
-    # initializing variables
+    # initializing variabless
     def __init__(self, str1, str2):
         self.str1 = str1
         self.str2 = str2
