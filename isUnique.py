@@ -1,8 +1,11 @@
 class Solution:
+    #initialize variables
     def __init__(self, input_string):
         self.input_string = input_string
 
     def is_unique(self):
+        # Check if there are same values in list 
+        # False - there are at least two same values, True - No same values
         l = len(self.input_string)
         for i in range(l):
             for j in range(i+1, l):
@@ -10,6 +13,7 @@ class Solution:
                     return False 
         return True
 
+# Example usage
 my_list = []
 a = int(input("Enter first number: "))
 b = int(input("Enter second number: "))  
