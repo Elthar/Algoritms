@@ -17,16 +17,17 @@ class Solution:
         for x in list2:
             if x not in list1:
                 res2.append(x)
-
-        if len(res) > 1 or len(res2) > 1:
+        if len(list1) - len(list2) > 1 or len(list2) - len(list > 1):
+            return False
+        elif len(res) > 1 or len(res2) > 1:
             return False
         else:
             return True
 
 # Input 2 strings and check if it was edited once or more times
 # True - if we can get strx1 by editing strx2 only with one move, False - if we have to edit strx1 two or more times to get strx2
-str1 = str(input())
-str2 = str(input())
+str1 = str(input('Enter first string: '))
+str2 = str(input('Enter second string: '))
 
 result = Solution(str1, str2)
 final_result = result.is_one_away()
