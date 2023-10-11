@@ -1,3 +1,6 @@
+# Class, which checks if we can get second string by editing first string with only one move and vice versa 
+# insert a character, remove a character, or replace a character - each are considered as a one move. 
+# True - if we can get strx1 by editing strx2 only with one move, False - if we have to edit strx1 two or more times to get strx2
 class Solution:
     # Initialize variables
     def __init__(self, str1, str2):
@@ -25,7 +28,6 @@ class Solution:
             return True
 
 # Input 2 strings and check if it was edited once or more times
-# True - if we can get strx1 by editing strx2 only with one move, False - if we have to edit strx1 two or more times to get strx2
 str1 = str(input('Enter first string: '))
 str2 = str(input('Enter second string: '))
 
