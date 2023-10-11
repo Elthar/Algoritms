@@ -1,3 +1,4 @@
+# Class which will make URL link from string by changing eac spaces to "%20"
 class Solution:
     # initialize variables
     def __init__(self, str1, str_length):
