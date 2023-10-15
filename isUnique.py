@@ -3,36 +3,31 @@
 # True - if this list has only unique values
 
 class Solution:
-    #initialize variables
     def __init__(self, input_string):
         self.input_string = input_string
 
     def is_unique(self):
-        # Check if there are same values in list 
-        # False - there are at least two same values, True - No same values
-        l = len(self.input_string)
-        for i in range(l):
-            for j in range(i+1, l):
-                if self.input_string[i] == self.input_string[j]:
-                    return False 
+        # Create an empty set to store unique characters
+        unique_set = set()
+        
+        # Iterate through each character in the input string
+        for char in self.input_string:
+            if char in unique_set:
+                # If the character is already in the set, it's not unique
+                return False
+            # Otherwise, add it to the set
+            unique_set.add(char)
+        
+        # If the loop completes without finding duplicate characters, it's unique
         return True
 
 # Example usage
-my_list = []
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))  
-c = int(input("Enter third number: "))  
-d = int(input("Enter fourth number: "))
+input_string = input("Enter a string: ")
 
-my_list.append(a)
-my_list.append(b)
-my_list.append(c)
-my_list.append(d)
-
-unique_checker = Solution(my_list)
+unique_checker = Solution(input_string)
 unique = unique_checker.is_unique()
 
 if unique:
-    print(f"{my_list} is unique")
+    print(f'"{input_string}" is unique')
 else:
-    print(f"{my_list} is not unique")
+    print(f'"{input_string}" is not unique')
