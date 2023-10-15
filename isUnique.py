@@ -1,3 +1,7 @@
+# In this class we check if we have the same values in given list
+# False - if it's unique list which doesn't have any repeating values
+# True - if this list has only unique values
+
 class Solution:
     #initialize variables
     def __init__(self, input_string):
