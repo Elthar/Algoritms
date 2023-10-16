@@ -6,12 +6,12 @@ class Solution:
     def remove_dups(self):
         # function set() in python can automatically remove duplicates from list
         # but it returns dictionary by default, so we change it to list 
-        a = list(set(self.my_list))
-        return a
+        new_list = list(set(self.my_list))
+        return new_list
 
 # Example usage
-my_list = [1,1,2,3,3,4,5,4]
-result = Solution(my_list)
-res2 = result.remove_dups()
-print(res2)
+
+result = Solution([1,1,2,3,3,4,5,4])
+final_result = result.remove_dups()
+print(final_result)
     
