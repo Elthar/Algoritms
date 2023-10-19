@@ -1,37 +1,34 @@
-# In this problem we check if it's possible to obtain a mirrored string by simply rearranging the letters. "
-# If so, return - True, if not, return - False
-class Solution:
-    def __init__(self, my_string):
-        self.my_string = my_string
+from collections import Counter
 
+# This class provides a solution for checking if a given string can be rearranged to form a palindrome
+class PermutationChecker:
+    def __init__(self, input_string):
+        # input_string: The input string to check for a permutation of a palindrome
+        self.input_string = input_string
+
+    # Check if the input string is a permutation of a palindrome
     def is_permutation_of_palindrome(self):
-        # remove spaces and convert strings to lowercase
-        self.my_string = self.my_string.replace(" ", "").lower()
-        char_count = {}
 
-        # Check if the character is an alphabet letter.
-        for i in self.my_string:
-            if i.isalpha():
-                if i in char_count:
-                    char_count[i] += 1
-                else:
-                    char_count[i] = 1
+        # Remove spaces and convert the string to lowercase
+        self.input_string = self.input_string.replace(" ", "").lower()
+        
+        # Use Counter to count character occurrences
+        char_count = Counter(self.input_string)
 
         odd_count = 0
-        
-        # Check if the count is odd.
-        for j in char_count.values():
-            if j % 2 != 0:
+
+        # Check if the count of characters with odd frequency is less than or equal to 1
+        for count in char_count.values():
+            if count % 2 != 0:
                 odd_count += 1
 
         return odd_count <= 1
 
 # Example usage
-my_string = 'Tact Coa'
-result = Solution(my_string)
+# return: True if the string can be rearranged to form a palindrome, False otherwise
+input_string = str(input())
+result = PermutationChecker(input_string)
 print(result.is_permutation_of_palindrome())
-
-
 
 
 
